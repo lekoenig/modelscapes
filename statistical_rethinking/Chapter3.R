@@ -17,7 +17,7 @@ ggplot() + geom_line(data=globe.df,aes(x=p,y=posterior))
 
 ## Problem 3M2:
 # Draw 10000 samples from the grid approximation from above. 
-# Then use the samples to calculate the 90% HDPI for p.
+# Then use the samples to calculate the 90% HPDI for p.
 
 sample.post <- sample(x=p_grid,prob=posterior,size=10000,replace=TRUE)
 HPDI(sample.post,prob=0.9)
